@@ -5,11 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Windows 启动",
+            "name": "Windows 启动 (Release)",
             "type": "cppvsdbg",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "program": "${workspaceFolder}/bin/KF-GINS",
+            "program": "${workspaceFolder}/bin/Release/KF-GINS.exe",
+            "args": ["./dataset/kf-gins.yaml"],
+            "stopAtEntry": true,
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Windows 调试 (短窗口 20s)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bin/Debug/KF-GINS.exe",
+            "args": ["./dataset/kf-gins-debug.yaml"],
+            "stopAtEntry": true,
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Windows 调试 (全量数据集)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bin/Debug/KF-GINS.exe",
             "args": ["./dataset/kf-gins.yaml"],
             "stopAtEntry": true,
             "environment": [],
